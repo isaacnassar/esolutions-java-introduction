@@ -2,8 +2,8 @@
 Repositorio con ejercicios básicos de introducción a Java
 
 Consignas: 
-1)	Escribir el código necesario para que
-	a. Al recibir un int por parámetro retornar un String.
+\n1)	Escribir el código necesario para que
+	\na. Al recibir un int por parámetro retornar un String.
 	b. Al recibir un String por parámetro retornar un int.
 	c. Al recibir un String por parámetro retornar un double.
 2)	Ejercicio para todos aquellos que no son desarrolladores.
