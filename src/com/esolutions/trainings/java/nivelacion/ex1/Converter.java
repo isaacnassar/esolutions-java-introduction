@@ -1,19 +1,24 @@
 package com.esolutions.trainings.java.nivelacion.ex1;
 
+import java.lang.String;
+
 public class Converter {
 
     public String intToString(int i) {
-        // write your code here
-        return null;
+        String a;
+        a = Integer.toString(i);
+        return a;
     }
 
     public int stringToInt(String s) {
-        // write your code here
-        return 0;
+        Integer a;
+        a= Integer.parseInt(s);
+        return a;
     }
 
     public double stringToDouble(String s) {
-        // write your code here
-        return 0D;
+        double a;
+        a = Double.parseDouble(s);
+        return a;
     }
 }
