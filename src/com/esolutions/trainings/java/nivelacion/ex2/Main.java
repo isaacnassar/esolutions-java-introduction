@@ -1,4 +1,4 @@
-package com.esolutions.trainings.java.nivelacion.ex2testers;
+package com.esolutions.trainings.java.nivelacion.ex2;
 
 import com.esolutions.trainings.java.nivelacion.Console;
 
