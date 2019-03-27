@@ -4,15 +4,17 @@ import java.util.Map;
 
 public class JavaCollections {
     public int[] distinct(int[] arr) {
-        // write your code here
+   //b. Obtener un array que solo contenga los valores no repetidos. 
+    	
+    	
         return arr;
     }
 
     public int[] sorted(int[] arr) {
-        // write your code here
+    //a.Ordenar todos los datos del array.
         return arr;
     }
-
+    
     /**
      * Debe contar la cantidad de ocurrencias de cada numero de 'arr'
      *
@@ -28,7 +30,9 @@ public class JavaCollections {
      * @return map con cantidada de repeticiones por numero de entrada
      */
     public Map<Integer, Integer> countByNumber(int[] arr) {
-        // write your code here
+//c. Obtener un mapa cuyas claves sean cada uno de los valores no repetidos del array original 
+//y el valor la cantidad de ocurrencias de ese número en el array original.
+
         return null;
     }
 }
