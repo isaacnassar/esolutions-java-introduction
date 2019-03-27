@@ -3,17 +3,17 @@ package com.esolutions.trainings.java.nivelacion.ex1;
 public class Converter {
 
     public String intToString(int i) {
-        // write your code here
-        return null;
+        String x = Integer.toString(i);
+        return x;
     }
 
     public int stringToInt(String s) {
-        // write your code here
-        return 0;
+    	int y = Integer.parseInt(s);
+        return y;
     }
 
     public double stringToDouble(String s) {
-        // write your code here
-        return 0D;
+    	Double z= Double.parseDouble(s);
+        return z;
     }
 }
