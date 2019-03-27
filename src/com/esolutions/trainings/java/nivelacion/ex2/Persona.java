@@ -1,4 +1,4 @@
-package com.esolutions.trainings.java.nivelacion.ex2testers;
+package com.esolutions.trainings.java.nivelacion.ex2;
 
 /*
  * Dada la clase que represente el concepto de Persona. Debera tener las
@@ -26,6 +26,19 @@ public class Persona {
      * Agregar un constructor que permita crear una nueva persona asignando un
      * nombre y edad Si la edad es menor a cero se debe asignar el valor edad = 0.
      */
+
+    public Persona(String nombre, float altura, Integer edad) {
+
+        if (edad<0)
+        {
+            this.edad = 0;
+        }
+        else
+        {
+            this.edad = edad;
+        }
+        this.nombre = nombre;
+    }
 
     public String getNombre() {
         return nombre;
@@ -59,7 +72,9 @@ public class Persona {
      * el peso no puede ser menor al dobde de la edad
      */
     public void setPeso(float peso) {
-        this.peso = peso;
+            if (peso>(edad*2))
+                this.peso = peso;
+
     }
 
     public boolean isSatisfecho() {
@@ -73,11 +88,24 @@ public class Persona {
     public void crecer() {
         // controlar que solo aumente la altura hasta los 18 a�os
         // cada vez que se llama al metodo crecer se debe aumentar un a�o.
+        if (edad <18)
+        {
+            edad++;
+            this.altura = altura + 10.6f;
+        }
         this.altura = altura + 10.6f;
     }
 
-    public void correr(int distanciaKM) {
 
+    public void correr(int distanciaKM) {
+        if (distanciaKM <= 7)
+        {
+            satisfecho = false;
+        }
+        else {
+            this.satisfecho = true;
+            this.peso = peso -1;
+        }
         // si la distancia es igual o menor a 7 el estado "satisfecho" cambia a false y
         // el peso no cambia
         // si la distancia es mayor 7 km el estado "satisfecho" cambia a true y el peso
@@ -85,18 +113,23 @@ public class Persona {
     }
 
     public void comer(String cantidad) {
+        double d = this.peso - 0.5;
+        float p = (float) d;
         switch (cantidad) {
             case "poco":
+                this.peso =p;
                 // baja de peso 0.5
                 break;
             case "mucho":
+                this.peso = peso++;
                 // sube de peso 1
                 break;
             case "nada":
+                this.peso = peso-1;
                 // baja de peso 1
                 break;
 
-            default:
+            default: this.satisfecho = true;
                 /*
                  * el peso no cambia y el estado "satisfecho cambia a true"
                  */
