@@ -2,12 +2,19 @@ package com.esolutions.trainings.java.nivelacion.ex5;
 
 public class ArrayUtils {
     public int sumOf(int[] arr) {
-        // write your code here
-        return 0;
+        int sum = 0;
+        for (int i = 0; i < arr.length ; i++) {
+            sum += arr[i];
+        }
+        return sum;
     }
 
     public int maxOf(int[] arr) {
-        // write your code here
-        return 0;
+        int mayor = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > mayor)
+                mayor = arr[i];
+        }
+        return mayor;
     }
 }

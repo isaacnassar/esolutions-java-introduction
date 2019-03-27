@@ -13,6 +13,7 @@ public class Main {
         System.out.println("2) " + p.isPalindrome("ahppyp00pyppha"));
         System.out.println("3) " + p.isPalindrome("880ljukujl88"));
         System.out.println("4) " + p.isPalindrome("yvoytty0vy"));
+        System.out.println("5) " + p.isPalindrome("arribalabirra"));
 
         Console.printFooter();
     }
