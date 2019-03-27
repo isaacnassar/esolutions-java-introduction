@@ -5,11 +5,13 @@ import java.util.Map;
 public class JavaCollections {
     public int[] distinct(int[] arr) {
         // write your code here
+
         return arr;
     }
 
     public int[] sorted(int[] arr) {
         // write your code here
+
         return arr;
     }
 

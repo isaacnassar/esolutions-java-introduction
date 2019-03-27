@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Console.printHeader(5);
 
-        final int[] arr = new int[]{10, 20, 40, 123, 90, 88, 122, 44, 100, 121, 99, 99, 123, 0};
+        final int[] arr = new int[]{10, 20, 40, 90, 88, 122, 44, 100, 121, 99, 99};
 
         ArrayUtils arrayUtils = new ArrayUtils();
         System.out.println("Suma: " + arrayUtils.sumOf(arr));
