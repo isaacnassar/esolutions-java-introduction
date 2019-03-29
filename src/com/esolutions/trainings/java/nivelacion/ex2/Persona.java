@@ -1,4 +1,4 @@
-package com.esolutions.trainings.java.nivelacion.ex2testers;
+package com.esolutions.trainings.java.nivelacion.ex2;
 
 /*
  * Dada la clase que represente el concepto de Persona. Debera tener las
@@ -22,6 +22,7 @@ public class Persona {
     private Float peso;
     private boolean satisfecho;
 
+
     /*
      * Agregar un constructor que permita crear una nueva persona asignando un
      * nombre y edad Si la edad es menor a cero se debe asignar el valor edad = 0.
@@ -39,8 +40,7 @@ public class Persona {
         return altura;
     }
 
-    public void setAltura(Float altura) {
-        this.altura = altura;
+    public void setAltura(Float altura) { this.altura = altura;
     }
 
     public Integer getEdad() {
