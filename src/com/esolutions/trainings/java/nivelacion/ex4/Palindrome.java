@@ -3,7 +3,11 @@ package com.esolutions.trainings.java.nivelacion.ex4;
 public class Palindrome {
 
     public boolean isPalindrome(String s) {
-        // write your code here
-        return false;
+        for (int i =0,j = s.length() -1; i<j;i++, j--){
+            if(s.charAt(i)!=s.charAt(j)){
+                return false;
+            }
+        }
+        return true;
     }
 }
