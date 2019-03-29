@@ -26,7 +26,6 @@ public class Persona {
      * Agregar un constructor que permita crear una nueva persona asignando un
      * nombre y edad Si la edad es menor a cero se debe asignar el valor edad = 0.
      */
-
     public Persona (String nombre, Float altura, Integer edad){
         this.nombre = nombre;
         this.altura = altura;
@@ -34,6 +33,15 @@ public class Persona {
         if (edad < 0 ) {
             this.edad = 0;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", altura=" + altura +
+                ", edad=" + edad +
+                '}';
     }
 
     public String getNombre() {
@@ -68,14 +76,7 @@ public class Persona {
      * el peso no puede ser menor al dobde de la edad
      */
 
-    @Override
-    public String toString() {
-        return "Persona{" +
-                "nombre='" + nombre + '\'' +
-                ", altura=" + altura +
-                ", edad=" + edad +
-                '}';
-    }
+
 
     public void setPeso(float peso) {
         this.peso = peso;

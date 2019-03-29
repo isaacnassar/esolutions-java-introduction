@@ -8,7 +8,7 @@ public class Main {
         Console.printHeader(2);
 
         /*1. crear 3 personas asignando para cada una un nombre, altura y edad diferente*/
-        Persona P1 = new Persona("Juan",1.88f,5);
+        Persona P1 = new Persona("Juan",1.88f,88);
         Persona P2 = new Persona("Alan",1.77f,31);
         Persona P3 = new Persona("Julieta",1.50f,15);
 
@@ -21,7 +21,7 @@ public class Main {
         for(int i = 0; i < array.length; i++)
         {
             // Imprimimos los elementos del array en pantalla.
-            System.out.println(""+array[i]);
+            System.out.println(""+array[i].toString());
         }
 
         Console.printFooter();
