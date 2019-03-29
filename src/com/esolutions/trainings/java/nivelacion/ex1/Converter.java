@@ -4,16 +4,19 @@ public class Converter {
 
     public String intToString(int i) {
         // write your code here
-        return null;
+        String texto = String.valueOf(i);
+        return texto;
     }
 
     public int stringToInt(String s) {
         // write your code here
-        return 0;
+        int entero = Integer.parseInt(s);
+        return entero;
     }
 
     public double stringToDouble(String s) {
         // write your code here
-        return 0D;
+        double doble = Double.parseDouble(s);
+        return doble;
     }
 }
