@@ -72,11 +72,10 @@ public class Persona {
      * el peso no puede ser menor al dobde de la edad
      */
     public void setPeso(float peso) {
-        if(peso < this.edad*2){
-        	this.peso = (float) 0.0; 
-        }else
-        	this.peso = peso;
-    	
+    	if(peso > edad*2){
+        	this.peso = peso; 
+        }
+        	
     }
 
     public boolean isSatisfecho() {
@@ -92,7 +91,7 @@ public class Persona {
         // cada vez que se llama al metodo crecer se debe aumentar un a�o.
     	if(edad <= 18) 
     	{
-    		edad++;
+    		this.edad++;
     		this.altura = altura + 10.6f;
     	}
        
@@ -110,7 +109,7 @@ public class Persona {
     	}else
     	{
     		satisfecho=true;
-    		peso=peso-1;
+    		peso--;
     	}
     }
 
@@ -134,8 +133,8 @@ public class Persona {
                 /*
                  * el peso no cambia y el estado "satisfecho cambia a true"
                  */
-            	
         }
+  
     }
 
 }
