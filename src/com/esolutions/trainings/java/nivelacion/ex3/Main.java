@@ -11,7 +11,6 @@ public class Main {
         System.out.println("1) " + mfd.monthFrom("01012010"));
         System.out.println("2) " + mfd.monthFrom("22102018"));
         System.out.println("3) " + mfd.monthFrom("31112019"));
-
         Console.printFooter();
     }
 
