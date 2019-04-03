@@ -20,13 +20,23 @@ public class JavaCollections {
 		}
 		Integer[] claves = mapa.keySet().toArray(new Integer[0]);
 		 Arrays.sort(claves);
-		//for (Integer clave: claves) {
-		 // System.out.println(clave);
-		//}
 		return claves;
 	}
+public int [] sorted(int []arr) {
+	int n = 0;
 
-	public int[] sorted(int[] arr) {
+    for (int i = 0; i < arr.length; i++) {
+        for (int j = 1; j < (arr.length - i); j++) {
+            if (arr[j - 1] > arr[j]) {
+                n = arr[j - 1];
+                arr[j - 1] = arr[j];
+                arr[j] = n;
+            }
+        }
+    }
+    return arr;
+}
+	public int[] sorted2(int[] arr) {
 		Arrays.sort(arr);
 		return arr;
 	}
@@ -41,15 +51,14 @@ public class JavaCollections {
 	 */
 	public Map<Integer, Integer> countByNumber(int[] arr) {
 		Map<Integer, Integer> mapa = new HashMap<>();
-		int cont=1;
+
 		for (int i = 0; i < arr.length; i++) {
 			if (mapa.containsKey(arr[i])) {
-				mapa.put(arr[i],cont + 1);
+				mapa.put(arr[i], mapa.get(arr[i]) + 1);
 			} else {
-				mapa.put(arr[i], cont);
+				mapa.put(arr[i], 1);
 			}
 		}
-
 		return mapa;
 	}
 }
