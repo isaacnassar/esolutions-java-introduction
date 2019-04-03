@@ -1,4 +1,4 @@
-package com.esolutions.trainings.java.nivelacion.ex2testers;
+package com.esolutions.trainings.java.nivelacion.ex2;
 
 /*
  * Dada la clase que represente el concepto de Persona. Debera tener las
@@ -27,11 +27,18 @@ public class Persona {
      * nombre y edad Si la edad es menor a cero se debe asignar el valor edad = 0.
      */
 
+    public Persona(String nombre, Float altura, Integer edad) {
+		this.nombre = nombre;
+		this.altura = altura;
+		this.edad = edad;
+	}
+     
+    
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+	public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
@@ -102,5 +109,13 @@ public class Persona {
                  */
         }
     }
+
+
+	@Override
+	public String toString() {
+		return "Nombre: " + getNombre() + ", Altura: " + getAltura() + ", Edad: " + getEdad();
+	}
+    
+    
 
 }

@@ -1,15 +1,20 @@
 package com.esolutions.trainings.java.nivelacion.ex6;
 
+import java.util.Arrays;
 import java.util.Map;
 
 public class JavaCollections {
+	
+	
     public int[] distinct(int[] arr) {
-        // write your code here
+       
         return arr;
     }
 
+   
     public int[] sorted(int[] arr) {
-        // write your code here
+    	
+    	Arrays.sort(arr);
         return arr;
     }
 
