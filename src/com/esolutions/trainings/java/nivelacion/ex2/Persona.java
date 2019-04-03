@@ -1,4 +1,4 @@
-package com.esolutions.trainings.java.nivelacion.ex2testers;
+package com.esolutions.trainings.java.nivelacion.ex2;
 
 /*
  * Dada la clase que represente el concepto de Persona. Debera tener las
