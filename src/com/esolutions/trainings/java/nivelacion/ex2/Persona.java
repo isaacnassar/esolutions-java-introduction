@@ -76,10 +76,10 @@ public class Persona {
      * el peso no puede ser menor al dobde de la edad
      */
 
-
-
-    public void setPeso(float peso) {
-        this.peso = peso;
+    public void setPeso(float p) {
+        if (p > edad * 2){
+             peso = p;
+        }
     }
 
     public boolean isSatisfecho() {
@@ -93,7 +93,12 @@ public class Persona {
     public void crecer() {
         // controlar que solo aumente la altura hasta los 18 a�os
         // cada vez que se llama al metodo crecer se debe aumentar un a�o.
-        this.altura = altura + 10.6f;
+
+        if (edad < 18)
+        {   edad++; //"++" es lo mismo que incrementar en 1
+            this.altura = altura + 10.6f;
+
+        }
     }
 
     public void correr(int distanciaKM) {
@@ -102,24 +107,36 @@ public class Persona {
         // el peso no cambia
         // si la distancia es mayor 7 km el estado "satisfecho" cambia a true y el peso
         // baja en 1
+
+        if (distanciaKM <= 7){
+            satisfecho = false;
+
+        } else {satisfecho = true;
+        peso--; //"--" es lo mismo que disminuir en 1
+
+        }
     }
 
     public void comer(String cantidad) {
         switch (cantidad) {
             case "poco":
                 // baja de peso 0.5
+                peso = peso - 0.5f;
                 break;
             case "mucho":
                 // sube de peso 1
+                peso++;
                 break;
             case "nada":
                 // baja de peso 1
+                peso--;
                 break;
 
             default:
                 /*
                  * el peso no cambia y el estado "satisfecho cambia a true"
                  */
+                satisfecho = true;
         }
     }
 
