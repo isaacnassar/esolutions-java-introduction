@@ -71,4 +71,16 @@ public class Persona {
 		}
 		return cant;
 	}
+	public String masAlto(Persona p[]) {
+		String nom="";
+		int pos=0;
+		float alt=0;
+        for (int i = 0; i < p.length; i++) {
+        	if(alt > p[i].getAltura()) {
+        		pos=i;
+        		alt=p[i].getAltura();
+        	}
+		}
+		return nom;
+	}
 }

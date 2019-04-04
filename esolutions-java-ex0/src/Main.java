@@ -10,6 +10,7 @@ public class Main {
 	        Persona p[] = new Persona[3];
 	        int suma=0;
 	        float alt=0;
+	        int pos=0;
 	        for (int i=0; i<p.length ; i++)
 	        	{
 	        		System.out.println("Ingrese el nombre de la "+(i+1)+"° persona:");
@@ -24,14 +25,12 @@ public class Main {
 	        			System.out.println(p[i].toString() + ". Su nombre tiene "+p[i].cantVocales(n1)+" vocales.");
 	        		}
 	        		suma=suma+e1;
+	        		if(alt < p[i].getAltura()) {
+		        		pos=i;
+		        		alt=p[i].getAltura();
+	        	}
 	        	}
 	        System.out.println(" El promedio de edad es de: "+suma/p.length);
-	        int pos=0;
-	        for (int i = 0; i < p.length; i++) {
-	        	if(alt > p[i].getAltura()) {
-	        		pos=i;
-	        	}
-			}
 	        System.out.println(" El nombre de la persona más alta es: "+p[pos].getNombre());
 	}
 
