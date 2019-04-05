@@ -23,7 +23,7 @@ public class JavaCollections {
         return resta;
     }
 
-  /*  public int[] distinct(int[] arr) {
+    public int[] distinct(int[] arr) {
         int resta = resta(arr);
         int[] aux = new int[resta];
         int position = 0;
@@ -47,7 +47,7 @@ public class JavaCollections {
         }
 
         return aux;
-    }*/
+    }
 
     //10, 20, 40, 123, 90, 88, 122, 44, 100, 121, 99, 99, 123, 0, 90, 1, 90, 2, 90
     public int[] sorted(int[] arr) {
@@ -113,7 +113,7 @@ public class JavaCollections {
 
         return cant;
     }
-
+/*
     public int [] distinct(int [] arr)
     {
         int [] limpio = new int[0]; //Array final con los numeros sin repetir
@@ -156,5 +156,5 @@ public class JavaCollections {
         }
         return false; //No existe en el array
     }
-
+*/
 }
