@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f427397-a71d-4304-86d9-eed357289ea6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/esolutions/trainings/java/nivelacion/ex2/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/esolutions/trainings/java/nivelacion/ex2/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/esolutions/trainings/java/nivelacion/ex6/JavaCollections.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/esolutions/trainings/java/nivelacion/ex6/JavaCollections.java" afterDir="false" />
-    </list>
+    <list default="true" id="6f427397-a71d-4304-86d9-eed357289ea6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,12 +218,12 @@
       <updated>1553690435212</updated>
       <workItem from="1553690443463" duration="11251000" />
       <workItem from="1553861221993" duration="12309000" />
-      <workItem from="1554142503291" duration="18907000" />
+      <workItem from="1554142503291" duration="19205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42467000" />
+    <option name="totallyTimeSpent" value="42765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
