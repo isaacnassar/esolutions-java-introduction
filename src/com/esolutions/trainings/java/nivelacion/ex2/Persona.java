@@ -1,4 +1,4 @@
-package com.esolutions.trainings.java.nivelacion.ex2testers;
+package com.esolutions.trainings.java.nivelacion.ex2;
 
 /*
  * Dada la clase que represente el concepto de Persona. Debera tener las
@@ -26,6 +26,14 @@ public class Persona {
      * Agregar un constructor que permita crear una nueva persona asignando un
      * nombre y edad Si la edad es menor a cero se debe asignar el valor edad = 0.
      */
+
+    public Persona(String nombre, Float altura, Integer edad) {
+        this.nombre = nombre;
+        this.altura = altura;
+        if(edad<0){
+            this.edad=0;
+        }else  {this.edad = edad;}
+    }
 
     public String getNombre() {
         return nombre;
@@ -59,7 +67,9 @@ public class Persona {
      * el peso no puede ser menor al dobde de la edad
      */
     public void setPeso(float peso) {
-        this.peso = peso;
+       if(edad*2 >= peso) {
+           this.peso = peso;
+       }
     }
 
     public boolean isSatisfecho() {
@@ -73,11 +83,20 @@ public class Persona {
     public void crecer() {
         // controlar que solo aumente la altura hasta los 18 a�os
         // cada vez que se llama al metodo crecer se debe aumentar un a�o.
-        this.altura = altura + 10.6f;
+        int i;
+        for(i=0; i<=18; i++) {
+            this.altura = altura + 10.6f;
+        }
     }
 
     public void correr(int distanciaKM) {
 
+        if(distanciaKM<=7){
+            this.satisfecho = false;
+        }else{
+            this.satisfecho= true;
+            this.peso = peso--;
+        }
         // si la distancia es igual o menor a 7 el estado "satisfecho" cambia a false y
         // el peso no cambia
         // si la distancia es mayor 7 km el estado "satisfecho" cambia a true y el peso
@@ -87,12 +106,15 @@ public class Persona {
     public void comer(String cantidad) {
         switch (cantidad) {
             case "poco":
+                    peso=peso-0.5f;
                 // baja de peso 0.5
                 break;
             case "mucho":
+                peso++;
                 // sube de peso 1
                 break;
             case "nada":
+                peso--;
                 // baja de peso 1
                 break;
 
@@ -103,4 +125,14 @@ public class Persona {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", altura=" + altura +
+                ", edad=" + edad +
+                ", peso=" + peso +
+                ", satisfecho=" + satisfecho +
+                '}';
+    }
 }
