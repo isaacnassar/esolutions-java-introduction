@@ -1,18 +1,11 @@
-package com.esolutions.trainings.java.nivelacion.ex2testers;
+package com.esolutions.trainings.java.nivelacion.ex2;
 
 /*
  * Dada la clase que represente el concepto de Persona. Debera tener las
- * propiedades:
- *
- * nombre, altura y edad deben ser propiedades obligatorias.
+ * propiedades: nombre, altura y edad deben ser propiedades obligatorias.
  * Es decir que, no puede existir ningun persona que no tenga un valor en estos atributos
- *
- *
- * y los metodos:
- *
- * Correr (que hara bajar el peso) Comer (que hara que aumente el peso) Crecer
+ * y los metodos: Correr (que hara bajar el peso) Comer (que hara que aumente el peso) Crecer
  * (que hara que aumente la estatura)
- *
  */
 public class Persona {
 
@@ -21,11 +14,6 @@ public class Persona {
     private Integer edad;
     private Float peso;
     private boolean satisfecho;
-
-    /*
-     * Agregar un constructor que permita crear una nueva persona asignando un
-     * nombre y edad Si la edad es menor a cero se debe asignar el valor edad = 0.
-     */
 
     public String getNombre() {
         return nombre;
@@ -54,8 +42,7 @@ public class Persona {
     public Float getPeso() {
         return peso;
     }
-
-    /*
+        /*
      * el peso no puede ser menor al dobde de la edad
      */
     public void setPeso(float peso) {
