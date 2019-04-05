@@ -81,7 +81,10 @@ public class Persona {
      * el peso no puede ser menor al dobde de la edad
      */
     public void setPeso(float peso) {
-        this.peso = peso;
+        if (peso>=edad*2)
+        {
+            this.peso = peso;
+        }
         }
   
     
@@ -96,7 +99,12 @@ public class Persona {
     public void crecer() {
         // controlar que solo aumente la altura hasta los 18 a�os
         // cada vez que se llama al metodo crecer se debe aumentar un a�o.
-        this.altura = altura + 10.6f;
+    	
+    	if (edad<18)
+    	{
+    		this.altura = altura + 10.6f;
+    		edad++;
+    	}
     }
 
     public void correr(int distanciaKM) {
@@ -105,24 +113,38 @@ public class Persona {
         // el peso no cambia
         // si la distancia es mayor 7 km el estado "satisfecho" cambia a true y el peso
         // baja en 1
+    	if (distanciaKM<=7)
+    	{
+    		this.satisfecho= false;
+    		    
+    	}
+    	else{
+    		this.satisfecho= true;
+    		this.peso= peso-1;
+        	} 	
+    	
     }
 
     public void comer(String cantidad) {
         switch (cantidad) {
             case "poco":
                 // baja de peso 0.5
+            	this.peso= peso-0.5f;
                 break;
             case "mucho":
                 // sube de peso 1
+            	this.peso= peso+1;
                 break;
             case "nada":
                 // baja de peso 1
+            	this.peso= peso-1;
                 break;
-
             default:
                 /*
                  * el peso no cambia y el estado "satisfecho cambia a true"
                  */
+            	this.peso= peso;
+            	this.satisfecho= true;
         }
     }
 

@@ -8,6 +8,7 @@ public class Main {
         Console.printHeader(4);
 
         Palindrome p = new Palindrome();
+               
 
         System.out.println("1) " + p.isPalindrome("menem"));
         System.out.println("2) " + p.isPalindrome("ahppyp00pyppha"));
