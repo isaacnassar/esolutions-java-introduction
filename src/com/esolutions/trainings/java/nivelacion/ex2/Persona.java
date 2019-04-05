@@ -30,11 +30,12 @@ public class Persona {
     public Persona(String nombre, Float altura, Integer edad) {
         this.nombre = nombre;
         this.altura = altura;
-        if (edad > 0){
+        this.edad = (edad > 0) ? edad : 0;
+        /*if (edad > 0){
             this.edad = edad;
         }else {
             this.edad = 0;
-        }
+        }*/
     }
 
     public String getNombre() {
@@ -69,7 +70,7 @@ public class Persona {
      * el peso no puede ser menor al dobde de la edad
      */
     public void setPeso(float peso) {
-        if (peso > (edad *2))
+        if (peso >= (edad *2))
             this.peso = peso;
     }
 
@@ -84,10 +85,8 @@ public class Persona {
     public void crecer() {
         // controlar que solo aumente la altura hasta los 18 a�os
         // cada vez que se llama al metodo crecer se debe aumentar un a�o.
-        if (edad <= 18){
-            this.altura = altura + 10.6f;
-        }
         edad++;
+        this.altura += (edad <=18) ? 10.6f : 0;
     }
 
     public void correr(int distanciaKM) {
@@ -124,4 +123,14 @@ public class Persona {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", altura=" + altura +
+                ", edad=" + edad +
+                ", peso=" + peso +
+                ", satisfecho=" + satisfecho +
+                '}';
+    }
 }
