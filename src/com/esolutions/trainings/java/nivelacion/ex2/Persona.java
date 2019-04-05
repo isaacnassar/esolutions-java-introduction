@@ -71,7 +71,6 @@ public class Persona {
         if(peso >= (this.edad+edad)) {
             this.peso = peso;
         }
-
     }
 
     public boolean isSatisfecho() {

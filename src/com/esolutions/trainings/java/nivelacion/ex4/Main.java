@@ -9,7 +9,7 @@ public class Main {
 
         Palindrome p = new Palindrome();
 
-        System.out.println("1) " + p.isPalindrome("menem"));
+        System.out.println("1) " + p.isPalindrome("mennem"));
         System.out.println("2) " + p.isPalindrome("ahppyp00pyppha"));
         System.out.println("3) " + p.isPalindrome("880ljukujl88"));
         System.out.println("4) " + p.isPalindrome("yvoytty0vy"));
