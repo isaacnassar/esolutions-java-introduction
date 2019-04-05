@@ -1,15 +1,32 @@
 package com.esolutions.trainings.java.nivelacion.ex6;
 
-import java.util.Map;
+import java.util.*;
 
 public class JavaCollections {
     public int[] distinct(int[] arr) {
-        // write your code here
-        return arr;
+        Set<Integer> dist= new HashSet<>();
+        for (int i = 0; i < arr.length; i++) {
+            dist.add(arr[i]);
+        }
+        int idx = 0;
+        int[] d = new int[dist.size()];
+        for (Integer var:dist) {
+            d[idx++]=var;
+        }
+        return d;
     }
 
     public int[] sorted(int[] arr) {
-        // write your code here
+        int aux;
+        for(int i=1; i<arr.length; i++){
+            for (int j=0; j<arr.length-i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    aux = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = aux;
+                }
+            }
+        }
         return arr;
     }
 
@@ -28,7 +45,12 @@ public class JavaCollections {
      * @return map con cantidada de repeticiones por numero de entrada
      */
     public Map<Integer, Integer> countByNumber(int[] arr) {
-        // write your code here
-        return null;
+        Map<Integer, Integer> ocurr = new HashMap<Integer, Integer>();
+        int value=0;
+        for (int i = 1; i < arr.length ; i++) {
+            value=ocurr.containsKey(arr[i])?ocurr.get(arr[i])+1:1;
+            ocurr.put(arr[i],value);
+        }
+        return ocurr;
     }
 }
