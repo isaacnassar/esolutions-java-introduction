@@ -1,4 +1,6 @@
-package com.esolutions.trainings.java.nivelacion.ex2testers;
+package com.esolutions.trainings.java.nivelacion.ex2;
+
+import java.text.DecimalFormat;
 
 /*
  * Dada la clase que represente el concepto de Persona. Debera tener las
@@ -16,7 +18,24 @@ package com.esolutions.trainings.java.nivelacion.ex2testers;
  */
 public class Persona {
 
-    private String nombre;
+	public Persona(String nombre, Float altura, Integer edad, Float peso, boolean satisfecho) {
+		super();
+		this.nombre = nombre;
+		this.altura = altura;
+		if (edad<0)
+			{
+			this.edad = 0;
+			}
+		else 
+			{
+			this.edad = edad;
+			}
+		
+		this.peso = peso;
+		this.satisfecho = satisfecho;
+	}
+
+	private String nombre;
     private Float altura;
     private Integer edad;
     private Float peso;
@@ -59,7 +78,16 @@ public class Persona {
      * el peso no puede ser menor al dobde de la edad
      */
     public void setPeso(float peso) {
-        this.peso = peso;
+        float pesoAux=0;
+        pesoAux=this.edad*2;
+    	if (peso>pesoAux)
+    		{
+    		this.peso = peso;
+    		}
+    	else if (peso<pesoAux)
+    		{
+    		System.out.println("El peso no puede ser menor al doble de la edad");
+    		}
     }
 
     public boolean isSatisfecho() {
@@ -73,7 +101,12 @@ public class Persona {
     public void crecer() {
         // controlar que solo aumente la altura hasta los 18 a�os
         // cada vez que se llama al metodo crecer se debe aumentar un a�o.
-        this.altura = altura + 10.6f;
+    	if (this.edad<19) 
+    		{
+    		this.altura = this.altura + (10.6f)/100;
+    		}
+    	this.edad++;
+    		
     }
 
     public void correr(int distanciaKM) {
@@ -82,25 +115,46 @@ public class Persona {
         // el peso no cambia
         // si la distancia es mayor 7 km el estado "satisfecho" cambia a true y el peso
         // baja en 1
+        if (distanciaKM<8)
+        	{
+        	this.satisfecho=false;
+        	}
+        if (distanciaKM>7)
+    		{
+        	this.satisfecho=true;
+        	this.peso=this.peso-1;
+    		}
     }
+    
 
     public void comer(String cantidad) {
         switch (cantidad) {
             case "poco":
                 // baja de peso 0.5
+            	this.peso=this.peso-Float.parseFloat("0.5");
                 break;
             case "mucho":
                 // sube de peso 1
+            	this.peso=this.peso+1;
                 break;
             case "nada":
                 // baja de peso 1
+            	this.peso=this.peso-1;
                 break;
 
             default:
                 /*
                  * el peso no cambia y el estado "satisfecho cambia a true"
                  */
+            	this.satisfecho=true;
+            	
         }
     }
 
+    @Override
+ 	public String toString() {
+     	DecimalFormat formato1 = new DecimalFormat("#.00");
+ 		return "Persona [nombre=" + nombre + ", altura=" + formato1.format(altura) + " mts. , edad=" + edad + ", peso=" + peso
+ 				+ ", satisfecho=" + satisfecho + "]";
+ 	}
 }
