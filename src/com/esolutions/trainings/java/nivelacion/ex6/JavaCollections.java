@@ -23,7 +23,7 @@ public class JavaCollections {
         return resta;
     }
 
-    public int[] distinct(int[] arr) {
+  /*  public int[] distinct(int[] arr) {
         int resta = resta(arr);
         int[] aux = new int[resta];
         int position = 0;
@@ -47,7 +47,7 @@ public class JavaCollections {
         }
 
         return aux;
-    }
+    }*/
 
     //10, 20, 40, 123, 90, 88, 122, 44, 100, 121, 99, 99, 123, 0, 90, 1, 90, 2, 90
     public int[] sorted(int[] arr) {
@@ -113,8 +113,8 @@ public class JavaCollections {
 
         return cant;
     }
-    /*--------------------------------------------
-    public static int [] distinct(int [] arr)
+
+    public int [] distinct(int [] arr)
     {
         int [] limpio = new int[0]; //Array final con los numeros sin repetir
         int j = 0; //Cantidad de numeros sin repetir
@@ -139,7 +139,7 @@ public class JavaCollections {
         return limpio; //Retorna el array sin repeticiones
     }
 
-    public static int[] copy(int [] original)
+    public int[] copy(int [] original)
     {
         int [] aux = new int[original.length+1]; //Crea un array con tamaño+1 del que se desea ampliar
 
@@ -148,7 +148,7 @@ public class JavaCollections {
         return aux; //Array aumentado en 1 con respecto al original.
     }
 
-    public static boolean existe(int n, int [] limpio)
+    public boolean existe(int n, int [] limpio)
     {
         for (int i : limpio)
         {
@@ -156,5 +156,5 @@ public class JavaCollections {
         }
         return false; //No existe en el array
     }
-     */
+
 }
