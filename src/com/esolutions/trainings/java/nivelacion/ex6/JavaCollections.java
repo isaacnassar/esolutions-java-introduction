@@ -12,7 +12,6 @@ public class JavaCollections {
         int resta = 0;
         int n = arr[0];
         int conrep = 0;
-
         for (int i = 1; i < arr.length; i++) {
             if (n == arr[i]) {
                 conrep++;
@@ -20,7 +19,6 @@ public class JavaCollections {
                 n = arr[i];
             }
         }
-
         resta = arr.length-conrep;
         return resta;
     }
